@@ -1,4 +1,4 @@
-Gaymer
+Gaymer.no
 ======
 
-Prosjekt i 219
+Prosjekt i DAT219
