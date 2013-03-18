@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GaymerLINQ">
   <DataContextMoniker Name="/GaymerLINQDataContext" />
   <nestedChildShapes>
-    <classShape Id="8032d8be-e1ef-4886-8e0a-d714bf02cb96" absoluteBounds="1.75, 0.75, 2, 1.1939925130208333">
-      <DataClassMoniker Name="/GaymerLINQDataContext/SlettMeg" />
+    <classShape Id="408e2fa2-0646-433a-bfb7-3cb677535fe5" absoluteBounds="1.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/GaymerLINQDataContext/UserTable" />
       <nestedChildShapes>
-        <elementListCompartment Id="1f24f82d-5808-46e6-ae57-163e24925b1f" absoluteBounds="1.7650000000000001, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="60907768-83e3-4337-a610-595bbc82da3f" absoluteBounds="1.5150000000000001, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

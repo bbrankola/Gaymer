@@ -29,9 +29,9 @@ public partial class GaymerLINQDataContext : System.Data.Linq.DataContext
 	
   #region Extensibility Method Definitions
   partial void OnCreated();
-  partial void InsertSlettMeg(SlettMeg instance);
-  partial void UpdateSlettMeg(SlettMeg instance);
-  partial void DeleteSlettMeg(SlettMeg instance);
+  partial void InsertUserTable(UserTable instance);
+  partial void UpdateUserTable(UserTable instance);
+  partial void DeleteUserTable(UserTable instance);
   #endregion
 	
 	public GaymerLINQDataContext() : 
@@ -64,76 +64,172 @@ public partial class GaymerLINQDataContext : System.Data.Linq.DataContext
 		OnCreated();
 	}
 	
-	public System.Data.Linq.Table<SlettMeg> SlettMegs
+	public System.Data.Linq.Table<UserTable> UserTables
 	{
 		get
 		{
-			return this.GetTable<SlettMeg>();
+			return this.GetTable<UserTable>();
 		}
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SlettMeg")]
-public partial class SlettMeg : INotifyPropertyChanging, INotifyPropertyChanged
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTable")]
+public partial class UserTable : INotifyPropertyChanging, INotifyPropertyChanged
 {
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
-	private int _sda;
+	private int _UserID;
 	
-	private string _jall;
+	private int _PersonalInfoID;
+	
+	private int _GeneralInfoID;
+	
+	private int _PublicInfoID;
+	
+	private string _Username;
+	
+	private string _PasswordHash;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnsdaChanging(int value);
-    partial void OnsdaChanged();
-    partial void OnjallChanging(string value);
-    partial void OnjallChanged();
+    partial void OnUserIDChanging(int value);
+    partial void OnUserIDChanged();
+    partial void OnPersonalInfoIDChanging(int value);
+    partial void OnPersonalInfoIDChanged();
+    partial void OnGeneralInfoIDChanging(int value);
+    partial void OnGeneralInfoIDChanged();
+    partial void OnPublicInfoIDChanging(int value);
+    partial void OnPublicInfoIDChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnPasswordHashChanging(string value);
+    partial void OnPasswordHashChanged();
     #endregion
 	
-	public SlettMeg()
+	public UserTable()
 	{
 		OnCreated();
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sda", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int sda
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int UserID
 	{
 		get
 		{
-			return this._sda;
+			return this._UserID;
 		}
 		set
 		{
-			if ((this._sda != value))
+			if ((this._UserID != value))
 			{
-				this.OnsdaChanging(value);
+				this.OnUserIDChanging(value);
 				this.SendPropertyChanging();
-				this._sda = value;
-				this.SendPropertyChanged("sda");
-				this.OnsdaChanged();
+				this._UserID = value;
+				this.SendPropertyChanged("UserID");
+				this.OnUserIDChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jall", DbType="NChar(10)")]
-	public string jall
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonalInfoID", DbType="Int NOT NULL")]
+	public int PersonalInfoID
 	{
 		get
 		{
-			return this._jall;
+			return this._PersonalInfoID;
 		}
 		set
 		{
-			if ((this._jall != value))
+			if ((this._PersonalInfoID != value))
 			{
-				this.OnjallChanging(value);
+				this.OnPersonalInfoIDChanging(value);
 				this.SendPropertyChanging();
-				this._jall = value;
-				this.SendPropertyChanged("jall");
-				this.OnjallChanged();
+				this._PersonalInfoID = value;
+				this.SendPropertyChanged("PersonalInfoID");
+				this.OnPersonalInfoIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GeneralInfoID", DbType="Int NOT NULL")]
+	public int GeneralInfoID
+	{
+		get
+		{
+			return this._GeneralInfoID;
+		}
+		set
+		{
+			if ((this._GeneralInfoID != value))
+			{
+				this.OnGeneralInfoIDChanging(value);
+				this.SendPropertyChanging();
+				this._GeneralInfoID = value;
+				this.SendPropertyChanged("GeneralInfoID");
+				this.OnGeneralInfoIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublicInfoID", DbType="Int NOT NULL")]
+	public int PublicInfoID
+	{
+		get
+		{
+			return this._PublicInfoID;
+		}
+		set
+		{
+			if ((this._PublicInfoID != value))
+			{
+				this.OnPublicInfoIDChanging(value);
+				this.SendPropertyChanging();
+				this._PublicInfoID = value;
+				this.SendPropertyChanged("PublicInfoID");
+				this.OnPublicInfoIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string Username
+	{
+		get
+		{
+			return this._Username;
+		}
+		set
+		{
+			if ((this._Username != value))
+			{
+				this.OnUsernameChanging(value);
+				this.SendPropertyChanging();
+				this._Username = value;
+				this.SendPropertyChanged("Username");
+				this.OnUsernameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordHash", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+	public string PasswordHash
+	{
+		get
+		{
+			return this._PasswordHash;
+		}
+		set
+		{
+			if ((this._PasswordHash != value))
+			{
+				this.OnPasswordHashChanging(value);
+				this.SendPropertyChanging();
+				this._PasswordHash = value;
+				this.SendPropertyChanged("PasswordHash");
+				this.OnPasswordHashChanged();
 			}
 		}
 	}
