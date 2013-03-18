@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <configuration>
+<<<<<<< HEAD
   <connectionStrings>
     <!--Fjern Database Koblingen deres-->
     <add name="gaymerdbConnectionString" connectionString="Data Source=mssql1.cloudsites.gearhost.com;Initial Catalog=gaymerdb;Persist Security Info=True;User ID=gaymerdb;Password=hSyOl042"
@@ -14,3 +15,16 @@
     <httpRuntime targetFramework="4.5"/>
   </system.web>
 </configuration>
+=======
+    <system.web>
+      <compilation debug="true" targetFramework="4.5" />
+      <httpRuntime targetFramework="4.5" />
+
+
+      <urlMappings enabled="true">
+        <add url="~/Create" mappedUrl="~/CMS/Create.aspx" />
+      </urlMappings>
+    </system.web>
+
+</configuration>
+>>>>>>> 233a775d5b1a1e84c4f847456a45781e9b9b279e
